@@ -2,13 +2,9 @@ import type { Config } from "@react-router/dev/config";
 import { vercelPreset } from "@vercel/react-router/vite";
 
 export default {
+  // Config options...
+  // Server-side render by default, to enable SPA mode set this to `false`
   ssr: true,
-  async prerender() {
-    return [
-      "/",          // prerendered (SSG)
-      "/about",     // prerendered (SSG)
-      // leave others out → they’ll be SSR by default
-    ];
-  },
+  prerender: async () => ['/'],
   presets: [vercelPreset()],
 } satisfies Config;
