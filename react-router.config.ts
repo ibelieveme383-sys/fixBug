@@ -1,5 +1,4 @@
 import type { Config } from "@react-router/dev/config";
-import { ssr } from "virtual:react-router/server-build";
 
 export default {
   // Config options...
